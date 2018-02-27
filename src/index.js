@@ -1,6 +1,7 @@
 import Hapi from "hapi";
 import mongoose from "mongoose";
 import Bell from "bell";
+import "babel-polyfill";
 
 const internals = {};
 
