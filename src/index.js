@@ -3,13 +3,17 @@ import mongoose from "mongoose";
 import Bell from "bell";
 import "babel-polyfill";
 
+const { IP, PORT } = process.env;
+
 const internals = {};
 
+const serverConfig = {
+  host: IP || "localhost",
+  port: PORT || 3000
+};
+
 internals.start = async function() {
-  const server = Hapi.server({
-    port: 3000,
-    host: "localhost"
-  });
+  const server = Hapi.server(serverConfig);
 
   await server.register(Bell);
 
