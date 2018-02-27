@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/index.js --exec babel-node",
-    "eslint": "eslint ./src --fix"
+    "start": "npm run build && node dist/index.js --exec babel-node",
+    "eslint": "eslint ./src --fix",
+    "build": "cross-env babel src -d dist",
+    "dev": "nodemon src/index.js --exec babel-node"
   },
   "author": "",
   "license": "ISC",
