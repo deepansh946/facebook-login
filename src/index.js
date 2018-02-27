@@ -50,7 +50,7 @@ internals.start = async function() {
   server.route({
     method: "GET",
     path: "/",
-    handler: () => "Hello there Deepansh"
+    handler: () => "Hello there!"
   });
 
   await server.start();
