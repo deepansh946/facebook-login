@@ -1,5 +1,7 @@
 # facebook-login
 
+This helps you sign in through facebook api. Only the backend is developed till now.
+
 * Clone this repo
 * Run
   * npm install
